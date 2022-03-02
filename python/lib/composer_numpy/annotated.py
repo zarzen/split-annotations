@@ -58,6 +58,7 @@ subtract    = sa(dc(_args), dc(_kwargs), dc(_ret))(np.subtract)
 multiply    = sa(dc(_args), dc(_kwargs), dc(_ret))(np.multiply)
 divide      = sa(dc(_args), dc(_kwargs), dc(_ret))(np.divide)
 power       = sa(dc(_args), dc(_kwargs), dc(_ret))(np.power)
+argmin = sa(dc(_args), dc(_kwargs), dc(_ret))(np.argmin)
 
 _args = (NdArraySplit(),)
 
@@ -70,6 +71,7 @@ arcsin      = sa(dc(_args), dc(_kwargs), dc(_ret))(np.arcsin)
 cos         = sa(dc(_args), dc(_kwargs), dc(_ret))(np.cos)
 sqrt        = sa(dc(_args), dc(_kwargs), dc(_ret))(np.sqrt)
 erf         = sa(dc(_args), dc(_kwargs), dc(_ret))(ss.erf)
+norm = sa(dc(_args), dc(_kwargs), dc(_ret))(np.linalg.norm)
 
 # addreduce = np.add.reduce
 addreduce = sa(dc(_args), dc(_kwargs), dc(_ret))(np.add.reduce)
